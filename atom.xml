@@ -65,9 +65,9 @@
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
       <category term="后端" scheme="http://yoursite.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
     

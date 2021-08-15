@@ -301,6 +301,221 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="该好好吃饭了">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/55436087?s=60&u=8ff4eee9bc998e5aadd3ecf815d0856452ec93e0&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jelly的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/" itemprop="url">python爬虫常用库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-15T13:19:49+08:00">
+                2021-08-15
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2021-08-15T13:20:35+08:00">
+                2021-08-15
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/" class="leancloud_visitors" data-flag-title="python爬虫常用库">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  206
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="python爬虫常用库"><a href="#python爬虫常用库" class="headerlink" title="python爬虫常用库"></a>python爬虫常用库</h1><p><strong>请求库：</strong></p>
+<ol>
+<li><strong>requests</strong> 这个库是爬虫最常用的一个库</li>
+<li><strong>Selenium</strong> Selenium 是一个自动化测试工具</li>
+<li><strong>ChomeDrive</strong> </li>
+<li><strong>GeckoDriver</strong> </li>
+<li><strong>PhantomJS</strong> </li>
+<li><strong>aiohttp</strong> </li>
+</ol>
+<p><strong>解析库：</strong></p>
+<ol>
+<li><strong>lxml</strong> lxml是python的一个解析库，这个库支持HTML和xml的解析，支持XPath的解析方式</li>
+<li><strong>Beautiful Soup</strong> Beautiful Soup也是python里一个HTML或XMl的解析库</li>
+<li><strong>pyquery</strong></li>
+</ol>
+<p><strong>数据库：</strong></p>
+<ol>
+<li><strong>mysql</strong> 数据库</li>
+<li>.<strong>MongoDB Mo goDB</strong></li>
+<li><strong>Redis</strong> </li>
+</ol>
+<ul>
+<li><code>requests</code> + <code>BeautifulSoup</code>+<code>mysql</code></li>
+<li><code>requests</code> + <code>lxml</code>+<code>mysql</code></li>
+</ul>
+<p><strong><em>两个例子引入</em></strong></p>
+<p>方式一： <code>requests</code> + <code>BeautifulSoup</code> + <code>select</code> css选择器</p>
+<p>方式二： <code>requests</code> + <code>BeautifulSoup</code> + <code>find_all</code> 进行信息提取</p>
+<h4 id="51job实例"><a href="#51job实例" class="headerlink" title="51job实例"></a>51job实例</h4><p>使用工具：Python+requests+lxml+pandas+time</p>
+<p>网站解析方式：Xpath</p>
+<p><strong>xpath语法：</strong></p>
+<ul>
+<li>nodename：选取nodename节点的所有子节点</li>
+<li>/：从根节点选取</li>
+<li>//：选取所有的当前节点，不考虑他们的位置</li>
+<li>. :选取当前节点</li>
+<li>.. :选取当前节点的父节点</li>
+<li>@ :选取属性</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/13/%E5%88%A9%E7%94%A8%20GitHub%20+%20PicGo%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1532,7 +1747,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1545,7 +1760,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1656,7 +1871,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.3k</span>
+    <span title="Site words total count">2.5k</span>
   
 </div>
 

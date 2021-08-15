@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-08-13T14:33:33.803Z</updated>
+  <updated>2021-08-15T05:20:35.073Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python爬虫常用库</title>
+    <link href="http://yoursite.com/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/"/>
+    <id>http://yoursite.com/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/</id>
+    <published>2021-08-15T05:19:49.000Z</published>
+    <updated>2021-08-15T05:20:35.073Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python爬虫常用库"><a href="#python爬虫常用库" class="headerlink" title="python爬虫常用库"></a>python爬虫常用库</h1><p><strong>请求库：</strong></p><ol><li><strong>requests</strong> 这个库是爬虫最常用的一个库</li><li><strong>Selenium</strong> Selenium 是一个自动化测试工具</li><li><strong>ChomeDrive</strong> </li><li><strong>GeckoDriver</strong> </li><li><strong>PhantomJS</strong> </li><li><strong>aiohttp</strong> </li></ol><p><strong>解析库：</strong></p><ol><li><strong>lxml</strong> lxml是python的一个解析库，这个库支持HTML和xml的解析，支持XPath的解析方式</li><li><strong>Beautiful Soup</strong> Beautiful Soup也是python里一个HTML或XMl的解析库</li><li><strong>pyquery</strong></li></ol><p><strong>数据库：</strong></p><ol><li><strong>mysql</strong> 数据库</li><li>.<strong>MongoDB Mo goDB</strong></li><li><strong>Redis</strong> </li></ol><ul><li><code>requests</code> + <code>BeautifulSoup</code>+<code>mysql</code></li><li><code>requests</code> + <code>lxml</code>+<code>mysql</code></li></ul><p><strong><em>两个例子引入</em></strong></p><p>方式一： <code>requests</code> + <code>BeautifulSoup</code> + <code>select</code> css选择器</p><p>方式二： <code>requests</code> + <code>BeautifulSoup</code> + <code>find_all</code> 进行信息提取</p><h4 id="51job实例"><a href="#51job实例" class="headerlink" title="51job实例"></a>51job实例</h4><p>使用工具：Python+requests+lxml+pandas+time</p><p>网站解析方式：Xpath</p><p><strong>xpath语法：</strong></p><ul><li>nodename：选取nodename节点的所有子节点</li><li>/：从根节点选取</li><li>//：选取所有的当前节点，不考虑他们的位置</li><li>. :选取当前节点</li><li>.. :选取当前节点的父节点</li><li>@ :选取属性</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;python爬虫常用库&quot;&gt;&lt;a href=&quot;#python爬虫常用库&quot; class=&quot;headerlink&quot; title=&quot;python爬虫常用库&quot;&gt;&lt;/a&gt;python爬虫常用库&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;请求库：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>利用 GitHub + PicGo搭建属于自己的图床</title>
@@ -87,9 +115,9 @@
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
       <category term="后端" scheme="http://yoursite.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
     

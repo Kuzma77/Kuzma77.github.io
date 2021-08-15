@@ -1,22 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/05/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>python爬虫常用库</title>
+    <url>/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="python爬虫常用库"><a href="#python爬虫常用库" class="headerlink" title="python爬虫常用库"></a>python爬虫常用库</h1><p><strong>请求库：</strong></p>
+<ol>
+<li><strong>requests</strong> 这个库是爬虫最常用的一个库</li>
+<li><strong>Selenium</strong> Selenium 是一个自动化测试工具</li>
+<li><strong>ChomeDrive</strong> </li>
+<li><strong>GeckoDriver</strong> </li>
+<li><strong>PhantomJS</strong> </li>
+<li><strong>aiohttp</strong> </li>
+</ol>
+<p><strong>解析库：</strong></p>
+<ol>
+<li><strong>lxml</strong> lxml是python的一个解析库，这个库支持HTML和xml的解析，支持XPath的解析方式</li>
+<li><strong>Beautiful Soup</strong> Beautiful Soup也是python里一个HTML或XMl的解析库</li>
+<li><strong>pyquery</strong></li>
+</ol>
+<p><strong>数据库：</strong></p>
+<ol>
+<li><strong>mysql</strong> 数据库</li>
+<li>.<strong>MongoDB Mo goDB</strong></li>
+<li><strong>Redis</strong> </li>
+</ol>
+<ul>
+<li><code>requests</code> + <code>BeautifulSoup</code>+<code>mysql</code></li>
+<li><code>requests</code> + <code>lxml</code>+<code>mysql</code></li>
+</ul>
+<p><strong><em>两个例子引入</em></strong></p>
+<p>方式一： <code>requests</code> + <code>BeautifulSoup</code> + <code>select</code> css选择器</p>
+<p>方式二： <code>requests</code> + <code>BeautifulSoup</code> + <code>find_all</code> 进行信息提取</p>
+<h4 id="51job实例"><a href="#51job实例" class="headerlink" title="51job实例"></a>51job实例</h4><p>使用工具：Python+requests+lxml+pandas+time</p>
+<p>网站解析方式：Xpath</p>
+<p><strong>xpath语法：</strong></p>
+<ul>
+<li>nodename：选取nodename节点的所有子节点</li>
+<li>/：从根节点选取</li>
+<li>//：选取所有的当前节点，不考虑他们的位置</li>
+<li>. :选取当前节点</li>
+<li>.. :选取当前节点的父节点</li>
+<li>@ :选取属性</li>
+</ul>
 ]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用 GitHub + PicGo搭建属于自己的图床</title>
+    <url>/2021/08/13/%E5%88%A9%E7%94%A8%20GitHub%20+%20PicGo%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="利用-GitHub-PicGo搭建属于自己的图床"><a href="#利用-GitHub-PicGo搭建属于自己的图床" class="headerlink" title="利用 GitHub + PicGo搭建属于自己的图床"></a>利用 GitHub + PicGo搭建属于自己的图床</h2><h3 id="1-软件下载地址"><a href="#1-软件下载地址" class="headerlink" title="1.软件下载地址"></a>1.软件下载地址</h3><ul>
+<li>Typora 官网：<a href="http://typora.io/" target="_blank" rel="noopener">Typora</a></li>
+<li>PicGo 蓝奏云下载地址：<a href="https://www.lanzous.com/ia49ojg" target="_blank" rel="noopener">PicGo-Setup-2.2.2.exe</a></li>
+<li>PicGo 在 GitHub 上的地址：<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">GitHub - PicGo</a></li>
+</ul>
+<h3 id="2-GitHub"><a href="#2-GitHub" class="headerlink" title="2.GitHub"></a>2.GitHub</h3><h4 id="2-1-创建图库"><a href="#2-1-创建图库" class="headerlink" title="2.1 创建图库"></a>2.1 创建图库</h4><p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200430142248.png" alt=""></p>
+<h4 id="2-2-获取令牌"><a href="#2-2-获取令牌" class="headerlink" title="2.2 获取令牌"></a>2.2 获取令牌</h4><p><strong>大致步骤如下：</strong></p>
+<ul>
+<li><p>点击自己的 GitHub 头像</p>
+</li>
+<li><p>Settings</p>
+</li>
+<li><p>Developer settings</p>
+</li>
+<li><p>Personal access tokens</p>
+</li>
+<li><p>Generate new token</p>
+<p><strong>之后会有这个界面，自己填选，Note注明给谁用，全部勾选</strong></p>
+</li>
+</ul>
+<p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200430143100.png" alt=""></p>
+<p><strong>生成token</strong></p>
+<p>此时可以保存备用，也可以在下边用到的时候，再按照上述步骤生成 token 。注意 token 是私密的，需要做好安全保护！</p>
+<h3 id="3-本地配置步骤"><a href="#3-本地配置步骤" class="headerlink" title="3.本地配置步骤"></a>3.本地配置步骤</h3><h4 id="3-1-安装配置PicGo"><a href="#3-1-安装配置PicGo" class="headerlink" title="3.1 安装配置PicGo"></a>3.1 安装配置PicGo</h4><ul>
+<li>接下来配置 GitHub 作为图床，在左侧找到<strong>图床设置</strong>，找到<strong>GitHub图床</strong>。</li>
+<li>前边有星号的为必填项，依次填入之前创建的仓库名，注意是：账户名/仓库名；</li>
+<li>然后填入设定的分支名（创建仓库时如果没有创建其他分支，默认就是 master 分支）；</li>
+<li>最后填入之前生成的 token 令牌，点击确定。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0t1em1hNzcvUGljdHVyZS9tYXN0ZXIvMjAyMDA0MzAxNTI3MjIucG5n?x-oss-process=image/format,png" alt=""></p>
+<ul>
+<li>然后找到 PicGo 设置，打开里边的 <strong><em>时间戳重命名</em></strong>，这样可以避免图床在上传文件时，由于文件名相同造成的错误。</li>
+<li>然后剩下的配置项可以不用管，参考的文章不建议设置为开机自启，因为等会配置好 typora 后，typora 在上传图片时会自动打开 PicGo 软件。</li>
+</ul>
+<h4 id="3-2-测试PicGo"><a href="#3-2-测试PicGo" class="headerlink" title="3.2 测试PicGo"></a>3.2 测试PicGo</h4><h3 id="4-其它"><a href="#4-其它" class="headerlink" title="4.其它"></a>4.其它</h3><h4 id="4-1-可能的问题"><a href="#4-1-可能的问题" class="headerlink" title="4.1 可能的问题"></a>4.1 可能的问题</h4><ul>
+<li>GitHub 成功上传图片，但是不能正常显示</li>
+</ul>
+<p>参考的这个网址：<a href="https://blog.csdn.net/weixin_42128813/article/details/102915578" target="_blank" rel="noopener">解决github图片不显示问题</a>，配置后，GitHub 即可正常显示图片</p>
+<h4 id="4-2-相关链接"><a href="#4-2-相关链接" class="headerlink" title="4.2 相关链接"></a>4.2 相关链接</h4><ul>
+<li><a href="https://juejin.im/post/5ea39170f265da47b35c88a7" target="_blank" rel="noopener">链接一</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/114175770" target="_blank" rel="noopener">链接二</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>文件上传Oss--前、后端结合(基于Springboot)</title>
+    <url>/2020/05/06/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0Oss-%E5%89%8D%E3%80%81%E5%90%8E%E7%AB%AF%E7%BB%93%E5%90%88-%E5%9F%BA%E4%BA%8ESpringboot/</url>
+    <content><![CDATA[<p>所需依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- https:&#x2F;&#x2F;mvnrepository.com&#x2F;artifact&#x2F;com.aliyun.oss&#x2F;aliyun-sdk-oss --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.aliyun.oss&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;aliyun-sdk-oss&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.9.1&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>AliOssUtil</code>工具类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.soft1851.music.admin.util;</span><br><span class="line"></span><br><span class="line">import com.aliyun.oss.OSS;</span><br><span class="line">import com.aliyun.oss.OSSClientBuilder;</span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line">import org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.util.UUID;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @author wl_sun</span><br><span class="line"> * @description TODO</span><br><span class="line"> * @Data 2020&#x2F;5&#x2F;1</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Slf4j</span><br><span class="line">public class AliOssUtil &#123;</span><br><span class="line">    public static String upload(MultipartFile sourceFile)&#123;</span><br><span class="line">        &#x2F;&#x2F; 获取文件名</span><br><span class="line">        String fileName &#x3D; sourceFile.getOriginalFilename();</span><br><span class="line">        &#x2F;&#x2F;uuid生成主文件名</span><br><span class="line">        String prefix &#x3D; UUID.randomUUID().toString();</span><br><span class="line">        assert fileName !&#x3D; null;</span><br><span class="line">        &#x2F;&#x2F;源文件的扩展名</span><br><span class="line">        String suffix &#x3D; fileName.substring(fileName.lastIndexOf(&quot;.&quot;));</span><br><span class="line">        &#x2F;&#x2F;创建File类型的临时文件</span><br><span class="line">        File tempFile &#x3D; null;</span><br><span class="line">        try &#123;</span><br><span class="line">            tempFile &#x3D; File.createTempFile(prefix,suffix);</span><br><span class="line">            &#x2F;&#x2F;将MultipartFile转换成File</span><br><span class="line">            sourceFile.transferTo(tempFile);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            log.error(e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">        assert tempFile !&#x3D; null;</span><br><span class="line">        return upload(tempFile);</span><br><span class="line">    &#125;</span><br><span class="line">    public static String upload(File file)&#123;</span><br><span class="line">        String endpoint &#x3D; &quot;https:&#x2F;&#x2F;oss-cn-beijing.aliyuncs.com&quot;;</span><br><span class="line">        String accessKeyId &#x3D; &quot;LT************z6jbo4&quot;;</span><br><span class="line">        String accessKeySecret &#x3D; &quot;6vVUW*********KwVZMjkv&quot;;</span><br><span class="line">        String bucketName &#x3D; &quot;bucket名&quot;;</span><br><span class="line">        String filePath &#x3D; &quot;存储路径，默认根目录&quot;;</span><br><span class="line">        String fileName &#x3D; file.getName();</span><br><span class="line">        String newFileName &#x3D; UUID.randomUUID().toString() + fileName.substring(fileName.indexOf(&quot;.&quot;));</span><br><span class="line">        &#x2F;&#x2F;创建OSSClient实例</span><br><span class="line">&#x2F;&#x2F;        OSSClient ossClient  &#x3D; new OSSClient(endpoint,accessKeyId,accessKeySecret);</span><br><span class="line">        OSS ossClient  &#x3D; new OSSClientBuilder().build(endpoint,accessKeyId,accessKeySecret);</span><br><span class="line">        &#x2F;&#x2F;上传文件到指定位置，并使用UUID更名</span><br><span class="line">        ossClient.putObject(bucketName,filePath + newFileName,file);</span><br><span class="line">        &#x2F;&#x2F;拼接URL</span><br><span class="line">        String url &#x3D; &quot;https:&#x2F;&#x2F;bucket名.oss-cn-beijing.aliyuncs.com&#x2F;&quot; + filePath + newFileName;</span><br><span class="line">        ossClient.shutdown();</span><br><span class="line">        return url;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        File file &#x3D; new File(&quot;C:\\Users\\HP\\Desktop\\en\\Python库大全.pdf&quot;);</span><br><span class="line">        upload(file);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>controller类接口编写</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.soft1851.music.admin.controller;</span><br><span class="line"></span><br><span class="line">import com.soft1851.music.admin.annotation.ControllerWebLog;</span><br><span class="line">import com.soft1851.music.admin.common.ResponseResult;</span><br><span class="line">import com.soft1851.music.admin.util.AliOssUtil;</span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line">import org.springframework.web.bind.annotation.PostMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line">import org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @author wl_sun</span><br><span class="line"> * @description TODO</span><br><span class="line"> * @Data 2020&#x2F;5&#x2F;1</span><br><span class="line"> *&#x2F;</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;&#x2F;api&quot;)</span><br><span class="line">@Slf4j</span><br><span class="line">public class UploadController &#123;</span><br><span class="line"></span><br><span class="line">    @PostMapping(&quot;&#x2F;uploadFile&quot;)</span><br><span class="line">    @ControllerWebLog</span><br><span class="line">    public ResponseResult uploadSingle(@RequestParam(&quot;file&quot;) MultipartFile sourceFile) &#123;</span><br><span class="line">        String url &#x3D; AliOssUtil.upload(sourceFile);</span><br><span class="line">        return ResponseResult.success(url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前端调用接口实现(以上传图片为例)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;file&quot; @change&#x3D;&quot;uploadImage($event)&quot;  id&#x3D;&quot;fileBox&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">uploadImage() &#123;</span><br><span class="line">      let formData &#x3D; new FormData()</span><br><span class="line">      formData.append(&#39;file&#39;, event.target.files[0])</span><br><span class="line">      this.axios(&#123;</span><br><span class="line">        method: &#39;post&#39;,</span><br><span class="line">        url: this.GLOBAL.baseUrl + &#39;&#x2F;api&#x2F;uploadFile&#39;,</span><br><span class="line">        headers: &#123;</span><br><span class="line">          &#39;Content-Type&#39;: &#39;multipart&#x2F;formdata&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        data: formData</span><br><span class="line">      &#125;).then((res) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(res.data.data)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>后端</tag>
+        <tag>js</tag>
+        <tag>java</tag>
+      </tags>
   </entry>
   <entry>
     <title>利用 GitHub + PicGo搭建属于自己的图床</title>
@@ -70,51 +170,27 @@
       </tags>
   </entry>
   <entry>
-    <title>利用 GitHub + PicGo搭建属于自己的图床</title>
-    <url>/2021/08/13/%E5%88%A9%E7%94%A8%20GitHub%20+%20PicGo%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="利用-GitHub-PicGo搭建属于自己的图床"><a href="#利用-GitHub-PicGo搭建属于自己的图床" class="headerlink" title="利用 GitHub + PicGo搭建属于自己的图床"></a>利用 GitHub + PicGo搭建属于自己的图床</h2><h3 id="1-软件下载地址"><a href="#1-软件下载地址" class="headerlink" title="1.软件下载地址"></a>1.软件下载地址</h3><ul>
-<li>Typora 官网：<a href="http://typora.io/" target="_blank" rel="noopener">Typora</a></li>
-<li>PicGo 蓝奏云下载地址：<a href="https://www.lanzous.com/ia49ojg" target="_blank" rel="noopener">PicGo-Setup-2.2.2.exe</a></li>
-<li>PicGo 在 GitHub 上的地址：<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">GitHub - PicGo</a></li>
-</ul>
-<h3 id="2-GitHub"><a href="#2-GitHub" class="headerlink" title="2.GitHub"></a>2.GitHub</h3><h4 id="2-1-创建图库"><a href="#2-1-创建图库" class="headerlink" title="2.1 创建图库"></a>2.1 创建图库</h4><p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200430142248.png" alt=""></p>
-<h4 id="2-2-获取令牌"><a href="#2-2-获取令牌" class="headerlink" title="2.2 获取令牌"></a>2.2 获取令牌</h4><p><strong>大致步骤如下：</strong></p>
-<ul>
-<li><p>点击自己的 GitHub 头像</p>
-</li>
-<li><p>Settings</p>
-</li>
-<li><p>Developer settings</p>
-</li>
-<li><p>Personal access tokens</p>
-</li>
-<li><p>Generate new token</p>
-<p><strong>之后会有这个界面，自己填选，Note注明给谁用，全部勾选</strong></p>
-</li>
-</ul>
-<p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200430143100.png" alt=""></p>
-<p><strong>生成token</strong></p>
-<p>此时可以保存备用，也可以在下边用到的时候，再按照上述步骤生成 token 。注意 token 是私密的，需要做好安全保护！</p>
-<h3 id="3-本地配置步骤"><a href="#3-本地配置步骤" class="headerlink" title="3.本地配置步骤"></a>3.本地配置步骤</h3><h4 id="3-1-安装配置PicGo"><a href="#3-1-安装配置PicGo" class="headerlink" title="3.1 安装配置PicGo"></a>3.1 安装配置PicGo</h4><ul>
-<li>接下来配置 GitHub 作为图床，在左侧找到<strong>图床设置</strong>，找到<strong>GitHub图床</strong>。</li>
-<li>前边有星号的为必填项，依次填入之前创建的仓库名，注意是：账户名/仓库名；</li>
-<li>然后填入设定的分支名（创建仓库时如果没有创建其他分支，默认就是 master 分支）；</li>
-<li>最后填入之前生成的 token 令牌，点击确定。</li>
-</ul>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0t1em1hNzcvUGljdHVyZS9tYXN0ZXIvMjAyMDA0MzAxNTI3MjIucG5n?x-oss-process=image/format,png" alt=""></p>
-<ul>
-<li>然后找到 PicGo 设置，打开里边的 <strong><em>时间戳重命名</em></strong>，这样可以避免图床在上传文件时，由于文件名相同造成的错误。</li>
-<li>然后剩下的配置项可以不用管，参考的文章不建议设置为开机自启，因为等会配置好 typora 后，typora 在上传图片时会自动打开 PicGo 软件。</li>
-</ul>
-<h4 id="3-2-测试PicGo"><a href="#3-2-测试PicGo" class="headerlink" title="3.2 测试PicGo"></a>3.2 测试PicGo</h4><h3 id="4-其它"><a href="#4-其它" class="headerlink" title="4.其它"></a>4.其它</h3><h4 id="4-1-可能的问题"><a href="#4-1-可能的问题" class="headerlink" title="4.1 可能的问题"></a>4.1 可能的问题</h4><ul>
-<li>GitHub 成功上传图片，但是不能正常显示</li>
-</ul>
-<p>参考的这个网址：<a href="https://blog.csdn.net/weixin_42128813/article/details/102915578" target="_blank" rel="noopener">解决github图片不显示问题</a>，配置后，GitHub 即可正常显示图片</p>
-<h4 id="4-2-相关链接"><a href="#4-2-相关链接" class="headerlink" title="4.2 相关链接"></a>4.2 相关链接</h4><ul>
-<li><a href="https://juejin.im/post/5ea39170f265da47b35c88a7" target="_blank" rel="noopener">链接一</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/114175770" target="_blank" rel="noopener">链接二</a></li>
-</ul>
+    <title>文件上传Oss--纯前端（2）</title>
+    <url>/2020/05/06/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0Oss%E2%80%94%E2%80%94%E7%BA%AF%E5%89%8D%E7%AB%AF%EF%BC%882%EF%BC%89/</url>
+    <content><![CDATA[<p>采用分片式上传，封装成<code>oss.js</code>工具类，方便调用</p>
+<p><code>oss.js</code>工具类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import OSS from &#39;ali-oss&#39;</span><br><span class="line">const region &#x3D; &#39;oss-cn-beijing&#39;</span><br><span class="line">const accessKeyId &#x3D; &#39;LT********o4&#39;</span><br><span class="line">const accessKeySecret &#x3D; &#39;6vVU******************Mjkv&#39;</span><br><span class="line">const bucket &#x3D; &#39;bucket名&#39;</span><br><span class="line">    const path &#x3D; &#39;存储路径，默认根目录&#39;</span><br><span class="line">let client &#x3D; new OSS(&#123;</span><br><span class="line">  region: region,</span><br><span class="line">  accessKeyId: accessKeyId,</span><br><span class="line">  accessKeySecret: accessKeySecret,</span><br><span class="line">  bucket: bucket,</span><br><span class="line">  path: path</span><br><span class="line">&#125;)</span><br><span class="line">&#x2F;&#x2F;  上传</span><br><span class="line">const CooOss &#x3D; function(file) &#123;</span><br><span class="line">  if (this instanceof CooOss) &#123;</span><br><span class="line">    let objectKey &#x3D; file.lastModified + &#39;_&#39; + file.name</span><br><span class="line">    return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">      client</span><br><span class="line">        .multipartUpload(objectKey, file)</span><br><span class="line">        .then((result) &#x3D;&gt; &#123;</span><br><span class="line">          console.log(result)</span><br><span class="line">          resolve(&#123;</span><br><span class="line">            code: 0,</span><br><span class="line">            objectKey: objectKey,</span><br><span class="line">            url: this.getOssFileUrl(objectKey),</span><br><span class="line">            msg: &#39;ok&#39;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch((err) &#x3D;&gt; &#123;</span><br><span class="line">          console(err)</span><br><span class="line">          console.error(&#39;上传出错了&#39;)</span><br><span class="line">          reject(&#123; code: -1, url: &#39;&#39;, objectKey: &#39;&#39;, msg: &#39;上传出错了&#39; &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return new CooOss(file)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;上传是设置文件key 一般是文件名&#125; obecjtKey</span><br><span class="line"> *&#x2F;</span><br><span class="line">CooOss.prototype.getOssFileUrl &#x3D; (obecjtKey) &#x3D;&gt; &#123;</span><br><span class="line">  if (!obecjtKey) return new Error(&#39;object key 必须传&#39;)</span><br><span class="line">  return &#39;https:&#x2F;&#x2F;&#39; + bucket + &#39;.&#39; + region + &#39;.aliyuncs.com&#x2F;&#39; + obecjtKey</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  install(Vue) &#123;</span><br><span class="line">    Vue.prototype.Oss &#x3D; &#123;</span><br><span class="line">      uploadFile: CooOss,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>mian.js</code>调用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Oss from &#39;.&#x2F;utils&#x2F;oss&#39;</span><br><span class="line">Vue.use(Oss)</span><br></pre></td></tr></table></figure>
+
+<p>页面调用(支持多选)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;v-file-input chip show-size counter multiple accept&#x3D;&quot;image&#x2F;*&quot; label&#x3D;&quot;File input&quot; :value&#x3D;&quot;files&quot; v-model&#x3D;&quot;files&quot;&gt;&lt;&#x2F;v-file-input&gt;</span><br><span class="line">&lt;v-btn small style&#x3D;&quot;margin-left: 16px&quot; @click&#x3D;&quot;uploadFile(files)&quot;&gt;上传&lt;&#x2F;v-btn&gt;</span><br><span class="line"></span><br><span class="line"> uploadFile(files) &#123;</span><br><span class="line">     for (let index &#x3D; 0; index &lt; files.length; index++) &#123;</span><br><span class="line">       const f &#x3D; files[index]</span><br><span class="line">       this.Oss.uploadFile(f).then((res) &#x3D;&gt; &#123;</span><br><span class="line">         console.log(res)</span><br><span class="line">       &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">     this.files &#x3D; []</span><br><span class="line">     alert(&#39;上传成功&#39;)</span><br><span class="line">   &#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 ]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>js</tag>
+      </tags>
   </entry>
   <entry>
     <title>文件上传`Oss`——纯前端（1）</title>
@@ -141,49 +217,21 @@
       </tags>
   </entry>
   <entry>
-    <title>文件上传Oss--前、后端结合(基于Springboot)</title>
-    <url>/2020/05/06/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0Oss-%E5%89%8D%E3%80%81%E5%90%8E%E7%AB%AF%E7%BB%93%E5%90%88-%E5%9F%BA%E4%BA%8ESpringboot/</url>
-    <content><![CDATA[<p>所需依赖</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- https:&#x2F;&#x2F;mvnrepository.com&#x2F;artifact&#x2F;com.aliyun.oss&#x2F;aliyun-sdk-oss --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.aliyun.oss&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;aliyun-sdk-oss&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.9.1&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/2020/05/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<p><code>AliOssUtil</code>工具类</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.soft1851.music.admin.util;</span><br><span class="line"></span><br><span class="line">import com.aliyun.oss.OSS;</span><br><span class="line">import com.aliyun.oss.OSSClientBuilder;</span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line">import org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.util.UUID;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @author wl_sun</span><br><span class="line"> * @description TODO</span><br><span class="line"> * @Data 2020&#x2F;5&#x2F;1</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Slf4j</span><br><span class="line">public class AliOssUtil &#123;</span><br><span class="line">    public static String upload(MultipartFile sourceFile)&#123;</span><br><span class="line">        &#x2F;&#x2F; 获取文件名</span><br><span class="line">        String fileName &#x3D; sourceFile.getOriginalFilename();</span><br><span class="line">        &#x2F;&#x2F;uuid生成主文件名</span><br><span class="line">        String prefix &#x3D; UUID.randomUUID().toString();</span><br><span class="line">        assert fileName !&#x3D; null;</span><br><span class="line">        &#x2F;&#x2F;源文件的扩展名</span><br><span class="line">        String suffix &#x3D; fileName.substring(fileName.lastIndexOf(&quot;.&quot;));</span><br><span class="line">        &#x2F;&#x2F;创建File类型的临时文件</span><br><span class="line">        File tempFile &#x3D; null;</span><br><span class="line">        try &#123;</span><br><span class="line">            tempFile &#x3D; File.createTempFile(prefix,suffix);</span><br><span class="line">            &#x2F;&#x2F;将MultipartFile转换成File</span><br><span class="line">            sourceFile.transferTo(tempFile);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            log.error(e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">        assert tempFile !&#x3D; null;</span><br><span class="line">        return upload(tempFile);</span><br><span class="line">    &#125;</span><br><span class="line">    public static String upload(File file)&#123;</span><br><span class="line">        String endpoint &#x3D; &quot;https:&#x2F;&#x2F;oss-cn-beijing.aliyuncs.com&quot;;</span><br><span class="line">        String accessKeyId &#x3D; &quot;LT************z6jbo4&quot;;</span><br><span class="line">        String accessKeySecret &#x3D; &quot;6vVUW*********KwVZMjkv&quot;;</span><br><span class="line">        String bucketName &#x3D; &quot;bucket名&quot;;</span><br><span class="line">        String filePath &#x3D; &quot;存储路径，默认根目录&quot;;</span><br><span class="line">        String fileName &#x3D; file.getName();</span><br><span class="line">        String newFileName &#x3D; UUID.randomUUID().toString() + fileName.substring(fileName.indexOf(&quot;.&quot;));</span><br><span class="line">        &#x2F;&#x2F;创建OSSClient实例</span><br><span class="line">&#x2F;&#x2F;        OSSClient ossClient  &#x3D; new OSSClient(endpoint,accessKeyId,accessKeySecret);</span><br><span class="line">        OSS ossClient  &#x3D; new OSSClientBuilder().build(endpoint,accessKeyId,accessKeySecret);</span><br><span class="line">        &#x2F;&#x2F;上传文件到指定位置，并使用UUID更名</span><br><span class="line">        ossClient.putObject(bucketName,filePath + newFileName,file);</span><br><span class="line">        &#x2F;&#x2F;拼接URL</span><br><span class="line">        String url &#x3D; &quot;https:&#x2F;&#x2F;bucket名.oss-cn-beijing.aliyuncs.com&#x2F;&quot; + filePath + newFileName;</span><br><span class="line">        ossClient.shutdown();</span><br><span class="line">        return url;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        File file &#x3D; new File(&quot;C:\\Users\\HP\\Desktop\\en\\Python库大全.pdf&quot;);</span><br><span class="line">        upload(file);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p><code>controller类接口编写</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.soft1851.music.admin.controller;</span><br><span class="line"></span><br><span class="line">import com.soft1851.music.admin.annotation.ControllerWebLog;</span><br><span class="line">import com.soft1851.music.admin.common.ResponseResult;</span><br><span class="line">import com.soft1851.music.admin.util.AliOssUtil;</span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line">import org.springframework.web.bind.annotation.PostMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line">import org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @author wl_sun</span><br><span class="line"> * @description TODO</span><br><span class="line"> * @Data 2020&#x2F;5&#x2F;1</span><br><span class="line"> *&#x2F;</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;&#x2F;api&quot;)</span><br><span class="line">@Slf4j</span><br><span class="line">public class UploadController &#123;</span><br><span class="line"></span><br><span class="line">    @PostMapping(&quot;&#x2F;uploadFile&quot;)</span><br><span class="line">    @ControllerWebLog</span><br><span class="line">    public ResponseResult uploadSingle(@RequestParam(&quot;file&quot;) MultipartFile sourceFile) &#123;</span><br><span class="line">        String url &#x3D; AliOssUtil.upload(sourceFile);</span><br><span class="line">        return ResponseResult.success(url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>前端调用接口实现(以上传图片为例)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;file&quot; @change&#x3D;&quot;uploadImage($event)&quot;  id&#x3D;&quot;fileBox&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">uploadImage() &#123;</span><br><span class="line">      let formData &#x3D; new FormData()</span><br><span class="line">      formData.append(&#39;file&#39;, event.target.files[0])</span><br><span class="line">      this.axios(&#123;</span><br><span class="line">        method: &#39;post&#39;,</span><br><span class="line">        url: this.GLOBAL.baseUrl + &#39;&#x2F;api&#x2F;uploadFile&#39;,</span><br><span class="line">        headers: &#123;</span><br><span class="line">          &#39;Content-Type&#39;: &#39;multipart&#x2F;formdata&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        data: formData</span><br><span class="line">      &#125;).then((res) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(res.data.data)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>js</tag>
-        <tag>后端</tag>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文件上传Oss--纯前端（2）</title>
-    <url>/2020/05/06/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0Oss%E2%80%94%E2%80%94%E7%BA%AF%E5%89%8D%E7%AB%AF%EF%BC%882%EF%BC%89/</url>
-    <content><![CDATA[<p>采用分片式上传，封装成<code>oss.js</code>工具类，方便调用</p>
-<p><code>oss.js</code>工具类</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import OSS from &#39;ali-oss&#39;</span><br><span class="line">const region &#x3D; &#39;oss-cn-beijing&#39;</span><br><span class="line">const accessKeyId &#x3D; &#39;LT********o4&#39;</span><br><span class="line">const accessKeySecret &#x3D; &#39;6vVU******************Mjkv&#39;</span><br><span class="line">const bucket &#x3D; &#39;bucket名&#39;</span><br><span class="line">    const path &#x3D; &#39;存储路径，默认根目录&#39;</span><br><span class="line">let client &#x3D; new OSS(&#123;</span><br><span class="line">  region: region,</span><br><span class="line">  accessKeyId: accessKeyId,</span><br><span class="line">  accessKeySecret: accessKeySecret,</span><br><span class="line">  bucket: bucket,</span><br><span class="line">  path: path</span><br><span class="line">&#125;)</span><br><span class="line">&#x2F;&#x2F;  上传</span><br><span class="line">const CooOss &#x3D; function(file) &#123;</span><br><span class="line">  if (this instanceof CooOss) &#123;</span><br><span class="line">    let objectKey &#x3D; file.lastModified + &#39;_&#39; + file.name</span><br><span class="line">    return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">      client</span><br><span class="line">        .multipartUpload(objectKey, file)</span><br><span class="line">        .then((result) &#x3D;&gt; &#123;</span><br><span class="line">          console.log(result)</span><br><span class="line">          resolve(&#123;</span><br><span class="line">            code: 0,</span><br><span class="line">            objectKey: objectKey,</span><br><span class="line">            url: this.getOssFileUrl(objectKey),</span><br><span class="line">            msg: &#39;ok&#39;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch((err) &#x3D;&gt; &#123;</span><br><span class="line">          console(err)</span><br><span class="line">          console.error(&#39;上传出错了&#39;)</span><br><span class="line">          reject(&#123; code: -1, url: &#39;&#39;, objectKey: &#39;&#39;, msg: &#39;上传出错了&#39; &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return new CooOss(file)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;上传是设置文件key 一般是文件名&#125; obecjtKey</span><br><span class="line"> *&#x2F;</span><br><span class="line">CooOss.prototype.getOssFileUrl &#x3D; (obecjtKey) &#x3D;&gt; &#123;</span><br><span class="line">  if (!obecjtKey) return new Error(&#39;object key 必须传&#39;)</span><br><span class="line">  return &#39;https:&#x2F;&#x2F;&#39; + bucket + &#39;.&#39; + region + &#39;.aliyuncs.com&#x2F;&#39; + obecjtKey</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  install(Vue) &#123;</span><br><span class="line">    Vue.prototype.Oss &#x3D; &#123;</span><br><span class="line">      uploadFile: CooOss,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>mian.js</code>调用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Oss from &#39;.&#x2F;utils&#x2F;oss&#39;</span><br><span class="line">Vue.use(Oss)</span><br></pre></td></tr></table></figure>
-
-<p>页面调用(支持多选)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;v-file-input chip show-size counter multiple accept&#x3D;&quot;image&#x2F;*&quot; label&#x3D;&quot;File input&quot; :value&#x3D;&quot;files&quot; v-model&#x3D;&quot;files&quot;&gt;&lt;&#x2F;v-file-input&gt;</span><br><span class="line">&lt;v-btn small style&#x3D;&quot;margin-left: 16px&quot; @click&#x3D;&quot;uploadFile(files)&quot;&gt;上传&lt;&#x2F;v-btn&gt;</span><br><span class="line"></span><br><span class="line"> uploadFile(files) &#123;</span><br><span class="line">     for (let index &#x3D; 0; index &lt; files.length; index++) &#123;</span><br><span class="line">       const f &#x3D; files[index]</span><br><span class="line">       this.Oss.uploadFile(f).then((res) &#x3D;&gt; &#123;</span><br><span class="line">         console.log(res)</span><br><span class="line">       &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">     this.files &#x3D; []</span><br><span class="line">     alert(&#39;上传成功&#39;)</span><br><span class="line">   &#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>js</tag>
-      </tags>
   </entry>
 </search>

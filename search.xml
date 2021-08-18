@@ -19,99 +19,28 @@
 ]]></content>
   </entry>
   <entry>
-    <title>python爬虫常用库</title>
-    <url>/2021/08/15/python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="python爬虫常用库"><a href="#python爬虫常用库" class="headerlink" title="python爬虫常用库"></a>python爬虫常用库</h1><p><strong>请求库：</strong></p>
-<ol>
-<li><strong>requests</strong> 这个库是爬虫最常用的一个库</li>
-<li><strong>Selenium</strong> Selenium 是一个自动化测试工具</li>
-<li><strong>ChomeDrive</strong> </li>
-<li><strong>GeckoDriver</strong> </li>
-<li><strong>PhantomJS</strong> </li>
-<li><strong>aiohttp</strong> </li>
-</ol>
-<p><strong>解析库：</strong></p>
-<ol>
-<li><strong>lxml</strong> lxml是python的一个解析库，这个库支持HTML和xml的解析，支持XPath的解析方式</li>
-<li><strong>Beautiful Soup</strong> Beautiful Soup也是python里一个HTML或XMl的解析库</li>
-<li><strong>pyquery</strong></li>
-</ol>
-<p><strong>数据库：</strong></p>
-<ol>
-<li><strong>mysql</strong> 数据库</li>
-<li>.<strong>MongoDB Mo goDB</strong></li>
-<li><strong>Redis</strong> </li>
-</ol>
+    <title>文件上传`Oss`——纯前端（1）</title>
+    <url>/2020/05/06/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0Oss%E2%80%94%E2%80%94%E7%BA%AF%E5%89%8D%E7%AB%AF%EF%BC%881%EF%BC%89/</url>
+    <content><![CDATA[<p>参考阿里云官方文档进行简单上传</p>
+<p>安装方法：<code>npm install aliyun-oss</code></p>
+<h4 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h4><p>创建实例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">getClient() &#123;</span><br><span class="line">      let OSS &#x3D; require(&#39;ali-oss&#39;)</span><br><span class="line">      this.client &#x3D; new OSS(&#123;</span><br><span class="line">        region: &#39;oss-cn-beijing&#39;,</span><br><span class="line">        accessKeyId: &#39;LTAI*********jbo4&#39;,</span><br><span class="line">        accessKeySecret: &#39;6v*********ZMjkv&#39;,</span><br><span class="line">        bucket: &#39;bucket名&#39;,</span><br><span class="line">        path: &#39;存储路径，默认根目录&#39;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><code>requests</code> + <code>BeautifulSoup</code>+<code>mysql</code></li>
-<li><code>requests</code> + <code>lxml</code>+<code>mysql</code></li>
+<li><code>region</code>:查看方式：打开你的<code>oss</code>对象存储—&gt;Bucket列表—&gt;若未创建先创建一个—&gt;创建好后打开(如图，红色框中的就是region)</li>
 </ul>
-<p><strong><em>两个例子引入</em></strong></p>
-<p>方式一： <code>requests</code> + <code>BeautifulSoup</code> + <code>select</code> css选择器</p>
-<p>方式二： <code>requests</code> + <code>BeautifulSoup</code> + <code>find_all</code> 进行信息提取</p>
-<h4 id="51job实例"><a href="#51job实例" class="headerlink" title="51job实例"></a>51job实例</h4><p>使用工具：Python+requests+lxml+pandas+time</p>
-<p>网站解析方式：Xpath</p>
-<p><strong>xpath语法：</strong></p>
+<p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200505233409.png" alt=""></p>
 <ul>
-<li>nodename：选取nodename节点的所有子节点</li>
-<li>/：从根节点选取</li>
-<li>//：选取所有的当前节点，不考虑他们的位置</li>
-<li>. :选取当前节点</li>
-<li>.. :选取当前节点的父节点</li>
-<li>@ :选取属性</li>
+<li><code>accessKeyId</code>和<code>accessKeySecret</code>:查看方式：点击右上角头像—&gt;点击<code>AccessKey</code>管理—&gt;若没有还是先创建，查看<code>accessKeySecret</code>可能需要接收手机验证码获取</li>
 </ul>
+<h4 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h4><p>获取文件(这边我以上传图片为例)，并上传</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;file&quot; @change&#x3D;&quot;uploadImage($event)&quot;  id&#x3D;&quot;fileBox&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"> uploadImage() &#123;</span><br><span class="line">      this.getClient()</span><br><span class="line">      this.file &#x3D; event.target.files[0]</span><br><span class="line">      var _this &#x3D; this</span><br><span class="line">      async function put() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          let result &#x3D; await _this.client.put(event.target.files[0].name, _this.file)</span><br><span class="line">          _this.inageSrc &#x3D; result.url &#x2F;&#x2F;这个result.url就是上传后的图片链接</span><br><span class="line">        &#125; catch (e) &#123;</span><br><span class="line">          console.log(e)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      put() &#x2F;&#x2F;不可去掉</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
+        <tag>前端</tag>
+        <tag>js</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>利用 GitHub + PicGo搭建属于自己的图床</title>
-    <url>/2021/08/13/%E5%88%A9%E7%94%A8%20GitHub%20+%20PicGo%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="利用-GitHub-PicGo搭建属于自己的图床"><a href="#利用-GitHub-PicGo搭建属于自己的图床" class="headerlink" title="利用 GitHub + PicGo搭建属于自己的图床"></a>利用 GitHub + PicGo搭建属于自己的图床</h2><h3 id="1-软件下载地址"><a href="#1-软件下载地址" class="headerlink" title="1.软件下载地址"></a>1.软件下载地址</h3><ul>
-<li>Typora 官网：<a href="http://typora.io/" target="_blank" rel="noopener">Typora</a></li>
-<li>PicGo 蓝奏云下载地址：<a href="https://www.lanzous.com/ia49ojg" target="_blank" rel="noopener">PicGo-Setup-2.2.2.exe</a></li>
-<li>PicGo 在 GitHub 上的地址：<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">GitHub - PicGo</a></li>
-</ul>
-<h3 id="2-GitHub"><a href="#2-GitHub" class="headerlink" title="2.GitHub"></a>2.GitHub</h3><h4 id="2-1-创建图库"><a href="#2-1-创建图库" class="headerlink" title="2.1 创建图库"></a>2.1 创建图库</h4><p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200430142248.png" alt=""></p>
-<h4 id="2-2-获取令牌"><a href="#2-2-获取令牌" class="headerlink" title="2.2 获取令牌"></a>2.2 获取令牌</h4><p><strong>大致步骤如下：</strong></p>
-<ul>
-<li><p>点击自己的 GitHub 头像</p>
-</li>
-<li><p>Settings</p>
-</li>
-<li><p>Developer settings</p>
-</li>
-<li><p>Personal access tokens</p>
-</li>
-<li><p>Generate new token</p>
-<p><strong>之后会有这个界面，自己填选，Note注明给谁用，全部勾选</strong></p>
-</li>
-</ul>
-<p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200430143100.png" alt=""></p>
-<p><strong>生成token</strong></p>
-<p>此时可以保存备用，也可以在下边用到的时候，再按照上述步骤生成 token 。注意 token 是私密的，需要做好安全保护！</p>
-<h3 id="3-本地配置步骤"><a href="#3-本地配置步骤" class="headerlink" title="3.本地配置步骤"></a>3.本地配置步骤</h3><h4 id="3-1-安装配置PicGo"><a href="#3-1-安装配置PicGo" class="headerlink" title="3.1 安装配置PicGo"></a>3.1 安装配置PicGo</h4><ul>
-<li>接下来配置 GitHub 作为图床，在左侧找到<strong>图床设置</strong>，找到<strong>GitHub图床</strong>。</li>
-<li>前边有星号的为必填项，依次填入之前创建的仓库名，注意是：账户名/仓库名；</li>
-<li>然后填入设定的分支名（创建仓库时如果没有创建其他分支，默认就是 master 分支）；</li>
-<li>最后填入之前生成的 token 令牌，点击确定。</li>
-</ul>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0t1em1hNzcvUGljdHVyZS9tYXN0ZXIvMjAyMDA0MzAxNTI3MjIucG5n?x-oss-process=image/format,png" alt=""></p>
-<ul>
-<li>然后找到 PicGo 设置，打开里边的 <strong><em>时间戳重命名</em></strong>，这样可以避免图床在上传文件时，由于文件名相同造成的错误。</li>
-<li>然后剩下的配置项可以不用管，参考的文章不建议设置为开机自启，因为等会配置好 typora 后，typora 在上传图片时会自动打开 PicGo 软件。</li>
-</ul>
-<h4 id="3-2-测试PicGo"><a href="#3-2-测试PicGo" class="headerlink" title="3.2 测试PicGo"></a>3.2 测试PicGo</h4><h3 id="4-其它"><a href="#4-其它" class="headerlink" title="4.其它"></a>4.其它</h3><h4 id="4-1-可能的问题"><a href="#4-1-可能的问题" class="headerlink" title="4.1 可能的问题"></a>4.1 可能的问题</h4><ul>
-<li>GitHub 成功上传图片，但是不能正常显示</li>
-</ul>
-<p>参考的这个网址：<a href="https://blog.csdn.net/weixin_42128813/article/details/102915578" target="_blank" rel="noopener">解决github图片不显示问题</a>，配置后，GitHub 即可正常显示图片</p>
-<h4 id="4-2-相关链接"><a href="#4-2-相关链接" class="headerlink" title="4.2 相关链接"></a>4.2 相关链接</h4><ul>
-<li><a href="https://juejin.im/post/5ea39170f265da47b35c88a7" target="_blank" rel="noopener">链接一</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/114175770" target="_blank" rel="noopener">链接二</a></li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>利用 GitHub + PicGo搭建属于自己的图床</title>
@@ -162,30 +91,6 @@
       <tags>
         <tag>github</tag>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文件上传`Oss`——纯前端（1）</title>
-    <url>/2020/05/06/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0Oss%E2%80%94%E2%80%94%E7%BA%AF%E5%89%8D%E7%AB%AF%EF%BC%881%EF%BC%89/</url>
-    <content><![CDATA[<p>参考阿里云官方文档进行简单上传</p>
-<p>安装方法：<code>npm install aliyun-oss</code></p>
-<h4 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h4><p>创建实例：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">getClient() &#123;</span><br><span class="line">      let OSS &#x3D; require(&#39;ali-oss&#39;)</span><br><span class="line">      this.client &#x3D; new OSS(&#123;</span><br><span class="line">        region: &#39;oss-cn-beijing&#39;,</span><br><span class="line">        accessKeyId: &#39;LTAI*********jbo4&#39;,</span><br><span class="line">        accessKeySecret: &#39;6v*********ZMjkv&#39;,</span><br><span class="line">        bucket: &#39;bucket名&#39;,</span><br><span class="line">        path: &#39;存储路径，默认根目录&#39;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>region</code>:查看方式：打开你的<code>oss</code>对象存储—&gt;Bucket列表—&gt;若未创建先创建一个—&gt;创建好后打开(如图，红色框中的就是region)</li>
-</ul>
-<p><img src="https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200505233409.png" alt=""></p>
-<ul>
-<li><code>accessKeyId</code>和<code>accessKeySecret</code>:查看方式：点击右上角头像—&gt;点击<code>AccessKey</code>管理—&gt;若没有还是先创建，查看<code>accessKeySecret</code>可能需要接收手机验证码获取</li>
-</ul>
-<h4 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h4><p>获取文件(这边我以上传图片为例)，并上传</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;file&quot; @change&#x3D;&quot;uploadImage($event)&quot;  id&#x3D;&quot;fileBox&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"> uploadImage() &#123;</span><br><span class="line">      this.getClient()</span><br><span class="line">      this.file &#x3D; event.target.files[0]</span><br><span class="line">      var _this &#x3D; this</span><br><span class="line">      async function put() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          let result &#x3D; await _this.client.put(event.target.files[0].name, _this.file)</span><br><span class="line">          _this.inageSrc &#x3D; result.url &#x2F;&#x2F;这个result.url就是上传后的图片链接</span><br><span class="line">        &#125; catch (e) &#123;</span><br><span class="line">          console.log(e)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      put() &#x2F;&#x2F;不可去掉</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>

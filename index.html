@@ -1676,26 +1676,6 @@ oss.js工具类
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      本站访客数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      人次
-    </span>
-  
-
-  
-    <span class="site-pv">
-      本站总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
-    </span>
-  
-</div>
-
 
 
 
@@ -2183,7 +2163,7 @@ oss.js工具类
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("ZNnCYKFKo0jIi0sQ5NwBQEFo-gzGzoHsz", "da8bXYFezEt5EJs3jrgp93gx");</script>
+  <script>AV.initialize("nIcSXd8u33hDmSxDEXuP5Oee-gzGzoHsz", "sEuIko2EiEHsRtKgK8LUpkC9");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -2289,102 +2269,6 @@ oss.js工具类
 
 
   
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  
-  <script>
-    (function () {
-
-      firebase.initializeApp({
-        apiKey: '',
-        projectId: ''
-      })
-
-      function getCount(doc, increaseCount) {
-        //increaseCount will be false when not in article page
-
-        return doc.get().then(function (d) {
-          var count
-          if (!d.exists) { //has no data, initialize count
-            if (increaseCount) {
-              doc.set({
-                count: 1
-              })
-              count = 1
-            }
-            else {
-              count = 0
-            }
-          }
-          else { //has data
-            count = d.data().count
-            if (increaseCount) {
-              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
-                doc.set({ //increase count
-                  count: count + 1
-                })
-                count++
-              }
-            }
-          }
-          if (window.localStorage && increaseCount) { //mark as visited
-            localStorage.setItem(title, true)
-          }
-
-          return count
-        })
-      }
-
-      function appendCountTo(el) {
-        return function (count) {
-          $(el).append(
-            $('<span>').addClass('post-visitors-count').append(
-              $('<span>').addClass('post-meta-divider').text('|')
-            ).append(
-              $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
-              )
-              ).append($('<span>').text('Visitors ' + count))
-          )
-        }
-      }
-
-      var db = firebase.firestore()
-      var articles = db.collection('articles')
-
-      //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = ''.length > 0
-      var isArchive = '' === 'true'
-      var isCategory = ''.length > 0
-      var isTag = ''.length > 0
-
-      if (isPost) { //is article page
-        var title = ''
-        var doc = articles.doc(title)
-
-        getCount(doc, true).then(appendCountTo($('.post-meta')))
-      }
-      else if (!isArchive && !isCategory && !isTag) { //is index page
-        var titles = [] //array to titles
-
-        var postsstr = 'titles.push("Leetcode刷题--数组题01");titles.push("利用 GitHub + PicGo搭建属于自己的图床");titles.push("文件上传Oss--前、后端结合(基于Springboot)");titles.push("文件上传Oss--纯前端（2）");titles.push("文件上传`Oss`——纯前端（1）");titles.push("Hello World");' //if you have a better way to get titles of posts, please change it
-        eval(postsstr)
-
-        var promises = titles.map(function (title) {
-          return articles.doc(title)
-        }).map(function (doc) {
-          return getCount(doc)
-        })
-        Promise.all(promises).then(function (counts) {
-          var metas = $('.post-meta')
-          counts.forEach(function (val, idx) {
-            appendCountTo(metas[idx])(val)
-          })
-        })
-      }
-    })()
-  </script>
-
 
   
 <script>
@@ -2417,7 +2301,7 @@ oss.js工具类
 
   	 <!-- custom analytics part create by xiamo -->
 <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("ZNnCYKFKo0jIi0sQ5NwBQEFo-gzGzoHsz", "da8bXYFezEt5EJs3jrgp93gx");</script>
+<script>AV.initialize("nIcSXd8u33hDmSxDEXuP5Oee-gzGzoHsz", "sEuIko2EiEHsRtKgK8LUpkC9");</script>
 <script>
 function showTime(Counter) {
 	var query = new AV.Query(Counter);
